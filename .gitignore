@@ -29,3 +29,5 @@ Lib/
 *.pyd
 
 .ipynb_checkpoints/
+
+supremerent.db

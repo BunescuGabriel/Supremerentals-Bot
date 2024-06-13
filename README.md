@@ -26,3 +26,28 @@ pip install -r requirements.txt`
 ```
 3. Obțineți token-ul botului de la [BotFather](https://t.me/BotFather) și înlocuiți `token_bot` cu token-ul primit.
 4. Rulați fișierul `main.py`.
+
+
+# Utilizarea SQLite cu Python - Telegram Bot
+
+Verificarea Existentei Tabelului în baza de date SQLite.
+```python
+import sqlite3
+conn = sqlite3.connect('exemplu.db')
+cursor = conn.cursor()
+cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='about_servici';")
+table_exists = cursor.fetchone()
+```
+## Funcționalități
+
+### Adăugarea unui Serviciu
+Pentru a adăuga un serviciu nou în baza de date, folosește comanda `/add` în chat-ul cu botul și urmează instrucțiunile pentru a introduce numele noului serviciu.
+
+```bash
+/add serviciu_nou
+```
+Sau a doua varianta, este introducerea `/add`, și deja în mesaj nou vom introduce `serviciu_nou`.
+### Obținerea Listei de Servicii
+Pentru a afișa lista completă a serviciilor prestate de Supreme 
+Rentals, poți accesa comanda "Servicii Prestate" din meniul principal
+al botului. Aceasta va afișa o listă detaliată a tuturor serviciilor disponibile.
